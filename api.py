@@ -1,3 +1,5 @@
+import socket
+
 import flask
 from baseApi import baseApi
 from flask import jsonify
@@ -25,7 +27,7 @@ def home():
 @app.route('/<title1>/')
 def getAll(title1=None):
     countryinfo = gettingInfo(title1)
-    if countryinfo != None:
+    if countryinfo is not None:
         return str(countryinfo)
     else:
         return 'ERROR NOT FOUUUUUND'
