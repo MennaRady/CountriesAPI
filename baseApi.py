@@ -19,6 +19,7 @@ class baseApi:
     def getCountryInfo(self,country):
         api_url = self.URL+country
         response = requests.get(api_url)
+
         if response.status_code == 200:
             return json.loads(response.content)
         else:
