@@ -1,6 +1,6 @@
 import json
 import unittest
-from unittest.mock import Mock
+from mock import Mock
 
 from mock import patch
 
@@ -34,11 +34,10 @@ class baseApi_test(unittest.TestCase):
     def test_getCountryInfo_true(self, mock_get):
         mock_reponse = Mock()
         mock_reponse.status_code = 200
-        fake = '{ "name":"John", "age":30, "city":"New York"}'
-        mock_reponse.content = fake
+        fake = '{ "age": 30, "city": "New York", "name": "John"}'
+        mock_reponse.content = str(fake)
         mock_get.return_value = mock_reponse
-
-        self.assertEqual(str({'name': 'John', 'age': 30, 'city': 'New York'}), str(self.base.getCountryInfo("egypt")))
+        self.assertEqual({u'age': 30,  u'city': u'New York', u'name': u'John'}, self.base.getCountryInfo("egypt"))
 
     @patch('requests.get')
     def test_getCountryInfo_false(self, mock_get):
