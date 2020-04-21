@@ -1,7 +1,7 @@
 language: python
 python:
-  - 2.7
+  - "2.7"
 script:
-  - ../test_Integration
-  - ../test_api
-  - ../Test_BaseApi
+  - ./test_Integration.py
+  - ./test_api.py
+  - ./Test_BaseApi.py
