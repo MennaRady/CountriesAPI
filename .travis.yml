@@ -1,6 +1,11 @@
 language: python
 python:
   - "2.7"
+
+install:
+  - pip install flask
+  - pip install flask_restful
+
 script:
   - ./api.py/test_Integration.py
   - ./api.py/test_api.py
