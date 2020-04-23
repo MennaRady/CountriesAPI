@@ -8,9 +8,9 @@ install:
  - pip install -r requirements.txt
 before_script:
  - cd Tests/
- - chmod +x Integration_test.py
- - chmod +x test_api.py
- - chmod +x Test_baseApi.py
+ - chmod +x ./Integration_test.py
+ - chmod +x ./test_api.py
+ - chmod +x ./Test_baseApi.py
 
 script:
   - ./Integration_Test.py
