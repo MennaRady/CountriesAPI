@@ -4,12 +4,12 @@ python:
  - "2.7"
 before_install:
  - pip install -U pip
- - chmod +x Integration_test.py
- - chmod +x test_api.py
- - chmod +x Test_baseApi.py
 install:
  - pip install -r requirements.txt
 before_script:
+ - chmod +x Integration_test.py
+ - chmod +x test_api.py
+ - chmod +x Test_baseApi.py
  - cd Tests/
 script:
   - ./Integration_Test.py
