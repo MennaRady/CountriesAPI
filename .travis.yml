@@ -7,6 +7,6 @@ install:
  - pip install -r requirements.txt
 
 script:
-  - python test_Integration.py
+  - python Integration_Test.py
   - python test_api.py
   - python Test_baseApi.py
