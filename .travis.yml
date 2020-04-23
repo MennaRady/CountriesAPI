@@ -2,17 +2,15 @@ language: python
 
 python:
  - "2.7"
+ cache: pip
 before_install:
  - pip install -U pip
 install:
  - pip install -r requirements.txt
 before_script:
  - cd Tests/
- - chmod +x Integration_test.py
- - chmod +x test_api.py
- - chmod +x Test_baseApi.py
 
 script:
-  - ./Integration_Test.py
-  - ./test_api.py
-  - ./Test_baseApi.py
+  - ./Integration_Test.py test
+  - ./test_api.py test
+  - ./Test_baseApi.py test
