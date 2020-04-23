@@ -2,12 +2,14 @@ language: python
 
 python:
  - "2.7"
-
+before_install:
+ - pip install -U pip
+ - pip install -U unittest
 install:
  - pip install -r requirements.txt
 before_script:
  - cd Tests/
 script:
-  - ./Integration_Test.py test
-  - ./test_api.py test
-  - ./Test_baseApi.py test
+  - ./Integration_Test.py
+  - ./test_api.py
+  - ./Test_baseApi.py
