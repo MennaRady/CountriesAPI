@@ -2,7 +2,6 @@ import unittest
 
 from api_fun import apiLogic
 
-
 class test_api(unittest.TestCase):
 
   def test_spec1(self):
