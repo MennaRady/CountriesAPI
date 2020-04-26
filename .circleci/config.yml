@@ -1,7 +1,7 @@
-version: 2.1
+version: 2.7
 
 orbs:
-  python: circleci/python@0.2.1
+  python: circleci/python@0.2.7
 
 jobs:
   build-and-test:
@@ -12,7 +12,7 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: Tests/test_baseApi.py test
+          command: ./Tests/test_baseApi.py test
           name: Test
 
 workflows:
